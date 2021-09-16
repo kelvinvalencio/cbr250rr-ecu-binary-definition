@@ -28,6 +28,10 @@ I'm currently working hard to make an XDF. Publishing XDF soon...
 | 0x4EF22 | Ignition Timing V Cyl 2 |
 
 ### Throttle-By-Wire Map
+- There are 2 maps I don't know which riding mode it belongs, **contact me if you know!**
+- I haven't found the correct factor offset, but the highest value of them all seem to be **13238**, **contact me if you know**
+- Table size 25x35. Cell data size 2 Bytes (16 bit)
+
 | Address | Name | Riding Mode
 |-- | -- | --
 |52CE8 | Throttle-By-Wire 5 | Sport+
