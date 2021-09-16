@@ -36,15 +36,15 @@ I'm currently working hard to make an XDF. Publishing XDF soon...
 |57446 | Throttle-By-Wire 14 | Sport+
 |58C10 | Throttle-By-Wire 17 | Sport+
 |5A3DA | Throttle-By-Wire 20 | Sport+
+| - | - | -
 |50D30 | Throttle-By-Wire 1 | (not sure)
-|
 |524FA | Throttle-By-Wire 4 | Sport
 |53CC4 | Throttle-By-Wire 7 | Sport
 |5548E | Throttle-By-Wire 10 | Sport
 |56C58 | Throttle-By-Wire 13 | Sport
 |58422 | Throttle-By-Wire 16 | Sport
 |59BEC | Throttle-By-Wire 19 | Sport
-|
+| - | - | -
 |5151E | Throttle-By-Wire 2 | (not sure)
 |51D0C | Throttle-By-Wire 3 | Comfort
 |534D6 | Throttle-By-Wire 6 | Comfort
