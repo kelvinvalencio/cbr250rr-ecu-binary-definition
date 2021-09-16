@@ -1,8 +1,12 @@
 # About CBR250RR ECU Binary Definition
-### My personal project, aimed to analyze, publish, and improve CBR250RR stock ECU binary definition
+### My personal project, goal is to analyze, publish, and improve CBR250RR stock ECU binary definition
+### This project aimed to help individual/user/amateur tuners tune their own bike
 Supported ECU Model is **38770-K64-N04**
 I need your help to improve and categorize these maps!
 You can help improving this definition by clicking **new issue** on **issues** tab OR **email me** kelvinvalencio@protonmail.com
+
+## Warning
+I'm not responsible for any damage/consequences that occurs. This documentation is aimed to be a guide for individual/user/amateur tuners
 
 ## XDF Releases
 I'm currently working hard to make an XDF. Publishing XDF soon...
