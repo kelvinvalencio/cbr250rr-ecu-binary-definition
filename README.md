@@ -34,25 +34,25 @@ I'm currently working hard to make an XDF. Publishing XDF soon...
 
 | Address | Name | Riding Mode
 |-- | -- | --
-|52CE8 | Throttle-By-Wire 5 | Sport+
-|544B2 | Throttle-By-Wire 8 | Sport+
-|55C7C | Throttle-By-Wire 11 | Sport+
-|57446 | Throttle-By-Wire 14 | Sport+
-|58C10 | Throttle-By-Wire 17 | Sport+
-|5A3DA | Throttle-By-Wire 20 | Sport+
+|0x52CE8 | Throttle-By-Wire 5 | Sport+
+|0x544B2 | Throttle-By-Wire 8 | Sport+
+|0x55C7C | Throttle-By-Wire 11 | Sport+
+|0x57446 | Throttle-By-Wire 14 | Sport+
+|0x58C10 | Throttle-By-Wire 17 | Sport+
+|0x5A3DA | Throttle-By-Wire 20 | Sport+
 | - | - | -
-|50D30 | Throttle-By-Wire 1 | (not sure)
-|524FA | Throttle-By-Wire 4 | Sport
-|53CC4 | Throttle-By-Wire 7 | Sport
-|5548E | Throttle-By-Wire 10 | Sport
-|56C58 | Throttle-By-Wire 13 | Sport
-|58422 | Throttle-By-Wire 16 | Sport
-|59BEC | Throttle-By-Wire 19 | Sport
+|0x50D30 | Throttle-By-Wire 1 | (not sure)
+|0x524FA | Throttle-By-Wire 4 | Sport
+|0x53CC4 | Throttle-By-Wire 7 | Sport
+|0x5548E | Throttle-By-Wire 10 | Sport
+|0x56C58 | Throttle-By-Wire 13 | Sport
+|0x58422 | Throttle-By-Wire 16 | Sport
+|0x59BEC | Throttle-By-Wire 19 | Sport
 | - | - | -
-|5151E | Throttle-By-Wire 2 | (not sure)
-|51D0C | Throttle-By-Wire 3 | Comfort
-|534D6 | Throttle-By-Wire 6 | Comfort
-|54CA0 | Throttle-By-Wire 9 | Comfort
-|5646A | Throttle-By-Wire 12 | Comfort
-|57C34 | Throttle-By-Wire 15 | Comfort
-|593FE | Throttle-By-Wire 18 | Comfort
+|0x5151E | Throttle-By-Wire 2 | (not sure)
+|0x51D0C | Throttle-By-Wire 3 | Comfort
+|0x534D6 | Throttle-By-Wire 6 | Comfort
+|0x54CA0 | Throttle-By-Wire 9 | Comfort
+|0x5646A | Throttle-By-Wire 12 | Comfort
+|0x57C34 | Throttle-By-Wire 15 | Comfort
+|0x593FE | Throttle-By-Wire 18 | Comfort
