@@ -12,7 +12,10 @@ Your contributions will help me and others build a better definition. **I will c
 - Some if not all information published here might be estimation, they could be not accurate or straight up incorrect, I'm not responsible for any consequences, with that in mind, I very much welcome corrections, If you find any inaccurate information, I will make sure to revise them.
 
 # XDF Releases
-I'm currently working hard to make an XDF. Publishing XDF soon...
+##### XDF is now available for download
+##### [CBR250RR 38770-K64-N04 XDF Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.7)
+Please read the release note first before proceeding to flash/modify your binary
+
 
 # Binary Definition
 ### Breakpoints
