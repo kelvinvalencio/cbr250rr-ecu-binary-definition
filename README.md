@@ -1,23 +1,22 @@
-# About CBR250RR ECU Binary Definition
-This is my personal project, the goal is to analyze, publish, and improve CBR250RR stock ECU binary definition. <br> My hope is that this project will be able to help individual/user/amateur tuners tune their own bike.  
+# ℹ️ About CBR250RR ECU Binary Definition
+This is my personal project, the goal is to analyze, publish, and improve CBR250RR stock ECU binary definition. <br>**This information wasn't publicly available on the Internet at the time of my first publication**, so my hope is that this project will be able to help individual/user/amateur tuners tune their own bike.  
 Supported ECU Model is **38770-K64-N04**. Original bin checksum value: **C2FF** 
 
 ### Community Help & Support
 I need your help to improve and categorize these maps! Discussions are encouraged here!
-You can help improving this definition by clicking **new issue** in **issues** tab OR **email me at** kelvinvalencio@protonmail.com  
+You can help improving this definition by clicking **new issue** in **issues** tab OR **email me at** <kelvinvalencio@protonmail.com>  
 Your contributions will help me and others build a better definition. **I will credit your work** in the credits section.
 
 ### Warning
 - I'm not responsible for any damage/consequences that occurs. This documentation is aimed to be a guide for individual/user/amateur tuners.
 - Some if not all information published here might be estimation, they could be not accurate or straight up incorrect, I'm not responsible for any consequences, with that in mind, I very much welcome corrections, If you find any inaccurate information, I will make sure to revise them.
 
-# XDF Releases
-##### XDF is now available for download
-##### [CBR250RR 38770-K64-N04 XDF Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.7)
-Please read the release note first before proceeding to flash/modify your binary
+# 📄 XDF Releases
+### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.7)  
+⚠️Please read the release note first before proceeding to flash or modify your binary
 
 
-# Binary Definition
+# 📑 Binary Definition
 ### Breakpoints
 Value breakpoints, could be called axis data
 - MAP units are still unknown, it could be actual pressure or just senso voltage, **contact me if you know**
@@ -83,7 +82,7 @@ Ignition-related map. Most likely degrees before Top Dead Center to ignite spark
 
 ### Throttle-By-Wire Map
 This should specify actual throttle body opening (Throttle Input vs RPM vs Throttle Opening), though not confirmed yet. **Please test and send back the result to me**
-- There are 2 maps I don't know which riding mode they belong (TBW #1 & TBW #2), **contact me if you know!**
+- ⚠️There are 2 maps I don't know which riding mode they belong (TBW #1 & TBW #2), **contact me if you know!**
 - This map might be categorized by gear, though not tested yet
 - Factor offset is based on the highest value in these maps, which is **13238** divided by 100 (percent) as 100% throttle opening, **contact me if it's incorrect**
 - Table size 29x35. Cell data size 2 Bytes (16 bit)
