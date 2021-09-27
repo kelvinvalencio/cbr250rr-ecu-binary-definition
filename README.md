@@ -12,7 +12,7 @@ Your contributions will help me and others build a better definition. **I will c
 - Some if not all information published here might not be accurate or straight up incorrect, anything that you do with this information is entirely your responsibility, with that in mind, I very much accept corrections. If you find any inaccurate information, I will make sure to revise them.
 
 # 📄 XDF Releases
-### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.7)  
+### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.8)  
 ⚠️Please read the release note first before proceeding to flash or modify your binary
 
 
@@ -79,6 +79,21 @@ Ignition-related map. Most likely degrees before Top Dead Center to ignite spark
 | 0x4B73A | Uncategorized Ignition 4 Cyl 2 | Unknown, please contact me if you know
 | 0x4E84C | Uncategorized Ignition 5 Cyl 1 | Unknown, please contact me if you know
 | 0x4EF22 | Uncategorized Ignition 5 Cyl 2 | Unknown, please contact me if you know
+
+### Limiters
+Thailand version of CBR250RR has RPM limiter of 15000. Their stock ECU's binary is compared to find useful limiter values
+
+- These are not limiters by gear, still uncategorized, please let me know if you can group them
+- Cell data size 2 Bytes (16 bit)
+
+| Start Address | Columns | Description | Conversion/Factor Offset
+| -- | -- | -- | --
+| 0x44DD8 | 3 | RPM Limiter 1 | (not converted)
+| 0x452A4 | 2 | RPM Limiter 2 | (not converted)
+| 0x455F2 | 2 | RPM Limiter 3 | (not converted)
+| 0x455FC | 2 | RPM Limiter 4 | (not converted)
+| 0x45944 | 2 | RPM Limiter 5 | (not converted)
+| 0x4594C | 1 | RPM Limiter 6 | (not converted)
 
 ### Throttle-By-Wire Map
 This should specify actual throttle body opening (Throttle Input vs RPM vs Throttle Opening), though not confirmed yet. **Please test and send back the result to me**
