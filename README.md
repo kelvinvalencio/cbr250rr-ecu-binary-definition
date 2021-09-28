@@ -4,7 +4,7 @@ Supported ECU Model is **38770-K64-N04**. Original bin checksum value: **C2FF**
 
 ### Community Help & Support
 I need your help to improve and categorize these maps! Discussions are encouraged here!
-You can help improving this definition by clicking **new issue** in **issues** tab OR **email me at** <kelvinvalencio@protonmail.com>  
+You can help improving this definition by clicking **New Discussion** in **Discussions** tab OR **email me at** <kelvinvalencio@protonmail.com>  
 Your contributions will help me and others build a better definition. **I will credit your work** in the credits section.
 
 ### Warning
@@ -17,19 +17,19 @@ Your contributions will help me and others build a better definition. **I will c
 
 
 # 📑 Binary Definition
-### Breakpoints
+### Axis Tables
 Value breakpoints, could be called axis data
 - MAP units are still unknown, it could be actual pressure or just senso voltage, **contact me if you know**
 - TPS highest value is 661, divided by 100 (percent) as 100% throttle input
 - Cell data size 2 Bytes (16 bit)
-- TBW breakpoint might not be accurate, I found it directly above TBW maps, highest value is 802
+- TBW axis might not be accurate, I found it directly above TBW maps, highest value is 802
 
-| Start Address | Description | Table Size | Conversion/Factor Offset
+| Start Address | Description | Columns | Conversion/Factor Offset
 | -- | -- | -- | --
-| 0x41222 | Manifold Air Pressure breakpoint | 25x1 | (not converted)
-| 0x41254 | RPM breakpoint | 35x1 | (not converted)
-| 0x411F0 | Throttle Position Sensor breakpoint | 25x1 | X/6.61
-| 0x50CF6 | Throttle-By-Wire breakpoint | 29x1 | Unknown, please contact me if you know
+| 0x41222 | Manifold Air Pressure axis | 25x1 | (not converted)
+| 0x41254 | RPM axis | 35x1 | (not converted)
+| 0x411F0 | Throttle Position Sensor axis | 25x1 | X/6.61
+| 0x50CF6 | Throttle-By-Wire axis | 29x1 | Unknown, please contact me if you know
 
 ### Fuel Map
 Most likely injection duration in microseconds during intake stroke.
@@ -88,12 +88,12 @@ Thailand version of CBR250RR has RPM limiter of 15000. Their stock ECU's binary 
 
 | Start Address | Columns | Description | Conversion/Factor Offset
 | -- | -- | -- | --
-| 0x44DD8 | 3 | RPM Limiter 1 | (not converted)
-| 0x452A4 | 2 | RPM Limiter 2 | (not converted)
-| 0x455F2 | 2 | RPM Limiter 3 | (not converted)
-| 0x455FC | 2 | RPM Limiter 4 | (not converted)
-| 0x45944 | 2 | RPM Limiter 5 | (not converted)
-| 0x4594C | 1 | RPM Limiter 6 | (not converted)
+| 0x44DD8 | 3 | Uncategorized RPM Limiter 1 | (not converted)
+| 0x452A4 | 2 | Uncategorized RPM Limiter 2 | (not converted)
+| 0x455F2 | 2 | Uncategorized RPM Limiter 3 | (not converted)
+| 0x455FC | 2 | Uncategorized RPM Limiter 4 | (not converted)
+| 0x45944 | 2 | Uncategorized RPM Limiter 5 | (not converted)
+| 0x4594C | 1 | Uncategorized RPM Limiter 6 | (not converted)
 
 ### Throttle-By-Wire Map
 This should specify actual throttle body opening (Throttle Input vs RPM vs Throttle Opening), though not confirmed yet. **Please test and send back the result to me**
