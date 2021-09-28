@@ -1,5 +1,4 @@
-# <p align="center">CBR250RR Stock ECU Binary Definition & XDF</p>
-# <p align="center">[Repository Page](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition)</p>
+# CBR250RR Stock ECU Binary Definition & XDF
 
 # ℹ️ About
 I find it difficult to flash my bike's ECU because the definition file is not available for free. The ones sold on the Internet cost a lot and are not really complete. So I decided to analyze the binary myself and publish the known definition, which address does what.  
