@@ -27,5 +27,5 @@ XDF Download & definition is available in the [Github repository page](https://g
 # Tags
 - CBR250RR Mapping / CBR250RR Map / CBR250RR XDF
 - CBR250RR Stock ECU Binary Definition for Reflashing or Remapping
-- CBR250RR Reflashing / CBR250RR Remapping
-- 38770-K64-N04 XDF File
+- CBR250RR Reflashing / CBR250RR Remapping / CBR250RR Mapping Data
+- 38770-K64-N04 XDF File / CBR250RR XDF
