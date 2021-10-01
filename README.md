@@ -26,10 +26,10 @@ Value breakpoints, could be called axis data
 
 | Start Address | Description | Columns | Conversion/Factor Offset
 | -- | -- | -- | --
-| 0x41222 | Manifold Air Pressure axis | 25x1 | (not converted)
-| 0x41254 | RPM axis | 35x1 | (not converted)
-| 0x411F0 | Throttle Position Sensor axis | 25x1 | X/6.61
-| 0x50CF6 | Throttle-By-Wire axis | 29x1 | Unknown, please contact me if you know
+| 0x41222 | Manifold Air Pressure axis | 25 | (not converted)
+| 0x41254 | RPM axis | 35 | (not converted)
+| 0x411F0 | Throttle Position Sensor axis | 25 | X/6.61
+| 0x50CF6 | Throttle-By-Wire axis | 29 | Unknown, please contact me if you know
 
 ### Fuel Map
 Most likely injection duration in microseconds during intake stroke.
@@ -97,37 +97,36 @@ Thailand version of CBR250RR has RPM limiter of 15000. Their stock ECU's binary 
 
 ### Throttle-By-Wire Map
 This should specify actual throttle body opening (Throttle Input vs RPM vs Throttle Opening), though not confirmed yet. **Please test and send back the result to me**
-- ⚠️There are 2 maps I don't know which riding mode they belong (TBW #1 & TBW #2), **contact me if you know!**
-- This map might be categorized by gear, though not tested yet
-- Factor offset is based on the highest value in these maps, which is **13238** divided by 100 (percent) as 100% throttle opening, **contact me if it's incorrect**
+- Factor offset is based on the highest value in these maps, which is **13238** divided by 100 for percentage display
 - Table size 29x35. Cell data size 2 Bytes (16 bit)
 
-| Start Address | Description | Riding Mode | Conversion/Factor Offset
-|-- | -- | -- | --
-| 0x52CE8 | Uncategorized Throttle-By-Wire 5 | Sport+ | X/132.38
-| 0x544B2 | Uncategorized Throttle-By-Wire 8 | Sport+ | X/132.38
-| 0x55C7C | Uncategorized Throttle-By-Wire 11 | Sport+ | X/132.38
-| 0x57446 | Uncategorized Throttle-By-Wire 14 | Sport+ | X/132.38
-| 0x58C10 | Uncategorized Throttle-By-Wire 17 | Sport+ | X/132.38
-| 0x5A3DA | Uncategorized Throttle-By-Wire 20 | Sport+ | X/132.38
-|- | - | - | -
-| 0x50D30 | Uncategorized Throttle-By-Wire 1 | (not sure) | X/132.38
-| 0x524FA | Uncategorized Throttle-By-Wire 4 | Sport | X/132.38
-| 0x53CC4 | Uncategorized Throttle-By-Wire 7 | Sport | X/132.38
-| 0x5548E | Uncategorized Throttle-By-Wire 10 | Sport | X/132.38
-| 0x56C58 | Uncategorized Throttle-By-Wire 13 | Sport | X/132.38
-| 0x58422 | Uncategorized Throttle-By-Wire 16 | Sport | X/132.38
-| 0x59BEC | Uncategorized Throttle-By-Wire 19 | Sport | X/132.38
-|- | - | - | -
-| 0x5151E | Uncategorized Throttle-By-Wire 2 | (not sure) | X/132.38
-| 0x51D0C | Uncategorized Throttle-By-Wire 3 | Comfort | X/132.38
-| 0x534D6 | Uncategorized Throttle-By-Wire 6 | Comfort | X/132.38
-| 0x54CA0 | Uncategorized Throttle-By-Wire 9 | Comfort | X/132.38
-| 0x5646A | Uncategorized Throttle-By-Wire 12 | Comfort | X/132.38
-| 0x57C34 | Uncategorized Throttle-By-Wire 15 | Comfort | X/132.38
-| 0x593FE | Uncategorized Throttle-By-Wire 18 | Comfort | X/132.38
+| Start Address | Description |  | Riding Mode | Conversion/Factor Offset
+|-- | -- | -- | -- | --
+| 0x52CE8 | Throttle-By-Wire 5 | 1 | Sport+ | X/132.38
+| 0x544B2 | Throttle-By-Wire 8 | 2 | Sport+ | X/132.38
+| 0x55C7C | Throttle-By-Wire 11 | 3 | Sport+ | X/132.38
+| 0x57446 | Throttle-By-Wire 14 | 4 | Sport+ | X/132.38
+| 0x58C10 | Throttle-By-Wire 17 | 5 | Sport+ | X/132.38
+| 0x5A3DA | Throttle-By-Wire 20 | 6 | Sport+ | X/132.38
+|-- | -- | -- | -- | --
+| 0x50D30 | Throttle-By-Wire 1 | 1 | (not tested yet) | X/132.38
+| 0x524FA | Throttle-By-Wire 4 | Neutral/Clutch-In | (not tested yet) | X/132.38
+| 0x53CC4 | Throttle-By-Wire 7 | 2 | Sport | X/132.38
+| 0x5548E | Throttle-By-Wire 10 | 3 | Sport | X/132.38
+| 0x56C58 | Throttle-By-Wire 13 | 4 | Sport | X/132.38
+| 0x58422 | Throttle-By-Wire 16 | 5 | Sport | X/132.38
+| 0x59BEC | Throttle-By-Wire 19 | 6 | Sport | X/132.38
+|-- | -- | -- | -- | --
+| 0x5151E | Throttle-By-Wire 2 | 1 | Comfort | X/132.38
+| 0x51D0C | Throttle-By-Wire 3 | Neutral/Clutch-In | Comfort | X/132.38
+| 0x534D6 | Throttle-By-Wire 6 | 2 | Comfort | X/132.38
+| 0x54CA0 | Throttle-By-Wire 9 | 3 | Comfort | X/132.38
+| 0x5646A | Throttle-By-Wire 12 | 4 | Comfort | X/132.38
+| 0x57C34 | Throttle-By-Wire 15 | 5 | Comfort | X/132.38
+| 0x593FE | Throttle-By-Wire 18 | 6 | Comfort | X/132.38
 
 # Tags
 - CBR250RR Mapping / CBR250RR Map / CBR250RR XDF
 - CBR250RR Stock ECU Binary Definition for Reflashing or Remapping
-- CBR250RR Remapping Data
+- CBR250RR Reflashing / CBR250RR Remapping / CBR250RR Mapping Data
+- 38770-K64-N04 XDF File / CBR250RR XDF
