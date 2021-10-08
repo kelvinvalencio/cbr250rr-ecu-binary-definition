@@ -138,7 +138,7 @@ Compensation tables are looked up by the ECU as the final step to compensate som
 | 0x50100 | TPS v RPM | 25x35 | X/1000
 
 
-# ECU Settings Switch/Flag
+### ECU Settings Switch/Flag
 Toggle on/off for some ECU settings
 
 | Address | Description | Bit Number to switch
