@@ -12,7 +12,7 @@ Your contributions will help me and others build a better definition. **I will c
 - Some if not all information published here might not be accurate or straight up incorrect, anything that you do with this information is entirely your responsibility, with that in mind, I very much accept corrections. If you find any inaccurate information, I will make sure to revise them.
 
 # 📄 XDF Releases
-### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.8)  
+### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.9)  
 ⚠️Please read the release note first before proceeding to flash or modify your binary
 
 
@@ -36,19 +36,20 @@ Most likely injection duration in microseconds during intake stroke.
 - Identical maps are considered Cylinder 1 & Cylinder 2 pair
 - They haven't been grouped/categorized yet
 - Unit for the values are unknown, **if you know please contact me**
-- Table size 25x35. Cell data size 2 Bytes (16 bit)
+- Cell data size 2 Bytes (16 bit)
 
-| Start Address | Description | Conversion/Factor Offset
-| -- | -- | --
-| 0x4129A | Uncategorized Fuel 1 Cyl 1 | X/1000
-| 0x41970 | Uncategorized Fuel 1 Cyl 2 | X/1000
-| 0x42046 | Uncategorized Fuel 2 Cyl 1 | X/1000
-| 0x4271C | Uncategorized Fuel 2 Cyl 2 | X/1000
-| 0x42DF2 | Uncategorized Fuel 3 Cyl 1 | X/1000
-| 0x434C8 | Uncategorized Fuel 3 Cyl 2 | X/1000
-| 0x43B9E | Uncategorized Fuel 4 Cyl 1 | X/1000
-| 0x44274 | Uncategorized Fuel 4 Cyl 2 | X/1000
-| 0x50100 | Uncategorized Fuel 5 (no cyl pair found) | X/1000
+| Start Address | Table Size |Description | Conversion/Factor Offset
+| -- | -- | -- | --
+| 0x4129A | 25x35 | Uncategorized Fuel 1 Cyl 1 | X/1000
+| 0x41970 | 25x35 | Uncategorized Fuel 1 Cyl 2 | X/1000
+| 0x42046 | 25x35 | Uncategorized Fuel 2 Cyl 1 | X/1000
+| 0x4271C | 25x35 | Uncategorized Fuel 2 Cyl 2 | X/1000
+| 0x42DF2 | 25x35 | Uncategorized Fuel 3 Cyl 1 | X/1000
+| 0x434C8 | 25x35 | Uncategorized Fuel 3 Cyl 2 | X/1000
+| 0x43B9E | 25x35 | Uncategorized Fuel 4 Cyl 1 | X/1000
+| 0x44274 | 25x35 | Uncategorized Fuel 4 Cyl 2 | X/1000
+| 0x50100 | 25x35 | Fuel 5 (Compensation > TPS v RPM) | X/1000
+| 0x5AC2C | 25x1 | Balance IAP v TPS | Unknown, please let me know
 
 ### Start Of Injection
 This map should specify injector timing/when to inject fuel in degrees before Top Dead Center during intake stroke.
@@ -94,13 +95,16 @@ Thailand version of CBR250RR has RPM limiter of 15000. Their stock ECU's binary 
 | 0x455FC | 2 | Uncategorized RPM Limiter 4 | (not converted)
 | 0x45944 | 2 | Uncategorized RPM Limiter 5 | (not converted)
 | 0x4594C | 1 | Uncategorized RPM Limiter 6 | (not converted)
+| -- | -- | -- | --
+| 0x5D92C | 2 | Speed Limiter 1 | X/90.09
+| 0x5D928 | 1 | Speed Limiter 2 | X/90.09
 
 ### Throttle-By-Wire Map
 This should specify actual throttle body opening (Throttle Input vs RPM vs Throttle Opening), though not confirmed yet. **Please test and send back the result to me**
 - Factor offset is based on the highest value in these maps, which is **13238** divided by 100 for percentage display
 - Table size 29x35. Cell data size 2 Bytes (16 bit)
 
-| Start Address | Description |  | Riding Mode | Conversion/Factor Offset
+| Start Address | Description | Transmission Gear | Riding Mode | Conversion/Factor Offset
 |-- | -- | -- | -- | --
 | 0x52CE8 | Throttle-By-Wire 5 | 1 | Sport+ | X/132.38
 | 0x544B2 | Throttle-By-Wire 8 | 2 | Sport+ | X/132.38
@@ -124,6 +128,24 @@ This should specify actual throttle body opening (Throttle Input vs RPM vs Throt
 | 0x5646A | Throttle-By-Wire 12 | 4 | Comfort | X/132.38
 | 0x57C34 | Throttle-By-Wire 15 | 5 | Comfort | X/132.38
 | 0x593FE | Throttle-By-Wire 18 | 6 | Comfort | X/132.38
+
+### Compensation
+Compensation tables are looked up by the ECU as the final step to compensate some values before execution
+
+| Start Address | Description | Table Size | Conversion/Factor Offset
+| -- | -- | -- | --
+| 0x4DA5C | Torque Limiter by Gear (probably limits the ignition timing) | 35x6 | Unknown
+| 0x50100 | TPS v RPM | 25x35 | X/1000
+
+
+# ECU Settings Switch/Flag
+Toggle on/off for some ECU settings
+
+| Address | Description | Bit Number to switch
+| -- | -- | --
+| 0x500E4 | Enable Immobilizer | Bit 6 / 7th bit
+| 0x500E4 | Enable AIS | Bit 15 / 16th bit
+| 0x500E4 | Enable Decel Cut | Bit 9 / 10th bit
 
 # Tags
 - CBR250RR Mapping / CBR250RR Map / CBR250RR XDF
