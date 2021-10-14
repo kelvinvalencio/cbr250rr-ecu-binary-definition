@@ -13,8 +13,9 @@ Your contributions will help me and others build a better definition. **I will c
 
 # 📄 XDF Releases
 ![XDF Parameter Tree](https://i.imgur.com/0d99Jk1.png)
-### 👇XDF is now available for download👇<br>[CBR250RR 38770-K64-N04 XDF Release Download](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.9)  
-⚠️Please read the release note first before proceeding to flash or modify your binary
+### 👇XDF is now available for download👇<br> 
+<a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.9" target="_blank">CBR250RR 38770-K64-N04 XDF Release Download</a>  
+⚠️Please read the release note first before proceeding to modify or flash your binary
 
 
 # 📑 Binary Definition
@@ -30,13 +31,13 @@ Value breakpoints, could be called axis data
 | 0x41222 | Manifold Air Pressure axis | 25 | (not converted)
 | 0x41254 | RPM axis | 35 | (not converted)
 | 0x411F0 | Throttle Position Sensor axis | 25 | X/6.61
-| 0x50CF6 | Throttle-By-Wire axis | 29 | Unknown, please contact me if you know
+| 0x50CF6 | Throttle-By-Wire axis | 29 | Unknown
 
 ### Fuel Map
 Most likely injection duration in microseconds during intake stroke.
-- Identical maps are considered Cylinder 1 & Cylinder 2 pair
+- Maps with similar values are considered Cylinder 1 & Cylinder 2 pair
 - They haven't been grouped/categorized yet
-- Unit for the values are unknown, **if you know please contact me**
+- Unit for the values are unknown
 - Cell data size 2 Bytes (16 bit)
 
 | Start Address | Table Size |Description | Conversion/Factor Offset
@@ -50,7 +51,7 @@ Most likely injection duration in microseconds during intake stroke.
 | 0x43B9E | 25x35 | Uncategorized Fuel 4 Cyl 1 | X/1000
 | 0x44274 | 25x35 | Uncategorized Fuel 4 Cyl 2 | X/1000
 | 0x50100 | 25x35 | Fuel 5 (Compensation > TPS v RPM) | X/1000
-| 0x5AC2C | 25x1 | Balance IAP v TPS | Unknown, please let me know
+| 0x5AC2C | 25x1 | Balance IAP v TPS | Unknown
 
 ### Start Of Injection
 This map should specify injector timing/when to inject fuel in degrees before Top Dead Center during intake stroke.
@@ -59,28 +60,27 @@ This map should specify injector timing/when to inject fuel in degrees before To
 
 | Start Address | Description | Conversion/Factor Offset
 | -- | -- | --
-| 0x4FF50 | Start Of Injection | Unknown, please contact me if you know
+| 0x4FF50 | Start Of Injection | Unknown
 
 ### Ignition Map
 Ignition-related map. Most likely degrees before Top Dead Center to ignite spark plug during compression stroke.
-- Identical maps are considered Cylinder 1 & Cylinder 2 pair
+- Maps with similar values are considered Cylinder 1 & Cylinder 2 pair
 - They haven't been grouped/categorized yet, **if you discover a pattern please contact me**
-- These maps could either be categorized by **gear** and **riding mode**, but not tested yet
-- I haven't found the correct conversion/factor offset, **if you know how to translate the numbers please contact me**
+- Still in raw values, if you know the correct Conversion/Factor Offset, please let me know
 - Table size 25x35. Cell data size 2 Bytes (16 bit)
 
 | Start Address | Description | Conversion/Factor Offset
 | -- | -- | --
-| 0x45E5C | Uncategorized Ignition 1 Cyl 1 | Unknown, please contact me if you know
-| 0x46532 | Uncategorized Ignition 1 Cyl 2 | Unknown, please contact me if you know
-| 0x479B4 | Uncategorized Ignition 2 Cyl 1 | Unknown, please contact me if you know
-| 0x4808A | Uncategorized Ignition 2 Cyl 2 | Unknown, please contact me if you know
-| 0x4950C | Uncategorized Ignition 3 Cyl 1 | Unknown, please contact me if you know
-| 0x49BE2 | Uncategorized Ignition 3 Cyl 2 | Unknown, please contact me if you know
-| 0x4B064 | Uncategorized Ignition 4 Cyl 1 | Unknown, please contact me if you know
-| 0x4B73A | Uncategorized Ignition 4 Cyl 2 | Unknown, please contact me if you know
-| 0x4E84C | Uncategorized Ignition 5 Cyl 1 | Unknown, please contact me if you know
-| 0x4EF22 | Uncategorized Ignition 5 Cyl 2 | Unknown, please contact me if you know
+| 0x45E5C | Uncategorized Ignition 1 Cyl 1 | Unknown
+| 0x46532 | Uncategorized Ignition 1 Cyl 2 | Unknown
+| 0x479B4 | Uncategorized Ignition 2 Cyl 1 | Unknown
+| 0x4808A | Uncategorized Ignition 2 Cyl 2 | Unknown
+| 0x4950C | Uncategorized Ignition 3 Cyl 1 | Unknown
+| 0x49BE2 | Uncategorized Ignition 3 Cyl 2 | Unknown
+| 0x4B064 | Uncategorized Ignition 4 Cyl 1 | Unknown
+| 0x4B73A | Uncategorized Ignition 4 Cyl 2 | Unknown
+| 0x4E84C | Uncategorized Ignition 5 Cyl 1 | Unknown
+| 0x4EF22 | Uncategorized Ignition 5 Cyl 2 | Unknown
 
 ### Limiters
 Thailand version of CBR250RR has RPM limiter of 15000. Their stock ECU's binary is compared to find useful limiter values
@@ -147,6 +147,13 @@ Toggle on/off for some ECU settings
 | 0x500E4 | Enable Immobilizer | Bit 6 / 7th bit
 | 0x500E4 | Enable AIS | Bit 15 / 16th bit
 | 0x500E4 | Enable Decel Cut | Bit 9 / 10th bit
+
+# Unsolved
+- Conversion/Factor offset for [Ignition Map](#ignition-map)
+- Gear in which Throttle-By-Wire 1 and Throttle-By-Wire 4 corresponds (See **[Throttle-By-Wire map](#throttle-by-wire-map)** section)
+- All uncategorized RPM Limiters, which gear or mode each limiter belong to (See **[Limiters](#limiters)** section)
+- [Ignition Map](#ignition-map) categorization & [Fuel Map](#fuel-map) categorization (gear, riding mode, etc.)
+- Anything marked **Unknown**/**Uncategorized** in the definition
 
 # Tags
 - CBR250RR Mapping / CBR250RR Map / CBR250RR XDF
