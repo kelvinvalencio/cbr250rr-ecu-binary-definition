@@ -1,6 +1,6 @@
 <head>
  <meta name="google-site-verification" content="p1E5Y7Ps3AeCKLcOE1gWXtRCXl8gkaZZSVr57DNwWoQ" />
- <link rel="icon" href="https://imgur.com/HQKNdcF" type="image/icon type">
+ <link rel="shortcut icon" type="image/x-icon" href="/cbr250rr-ecu-binary-definition/tree/gh-pages/favicon.ico"/>
 </head>
 # CBR250RR Stock ECU Binary Definition & XDF
 
