@@ -14,7 +14,7 @@ Your contributions will help me and others build a better definition. **I will c
 # 📄 XDF Releases
 ![XDF Parameter Tree](https://i.imgur.com/0d99Jk1.png)
 ### 👇XDF is now available for download👇<br> 
-<a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/v0.9" target="_blank">CBR250RR 38770-K64-N04 XDF Release Download</a>  
+<a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/38770-K64-N04-v0.95" target="_blank">CBR250RR 38770-K64-N04 XDF Release Download</a>  
 ⚠️Please read the release note first before proceeding to modify or flash your binary
 
 
@@ -142,11 +142,14 @@ Compensation tables are looked up by the ECU as the final step to compensate som
 ### ECU Settings Switch/Flag
 Toggle on/off for some ECU settings
 
-| Address | Description | Bit Number to switch
-| -- | -- | --
-| 0x500E4 | Enable Immobilizer | Bit 6 / 7th bit
-| 0x500E4 | Enable AIS | Bit 15 / 16th bit
-| 0x500E4 | Enable Decel Cut | Bit 9 / 10th bit
+| Address | Description | Bit Number to switch | LSB
+| -- | -- | -- | --
+| 0x500E4 | Enable Immobilizer | Bit 6 / 7th bit | No
+| 0x500E4 | Enable AIS | Bit 15 / 16th bit | No
+| 0x500E4 | Enable Decel Cut | Bit 9 / 10th bit | No
+| 0x500E4 | Enable O2 Sensor | Bit 0 / 1st bit | No
+| 0x500E4 | Enable O2 Sensor Heater | Bit 1 / 2nd bit | No
+| 0x500EA | Disable Front Speed Sensor | Bit 10 | Yes
 
 # Unsolved
 - Conversion/Factor offset for [Ignition Map](#ignition-map)
