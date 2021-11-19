@@ -12,7 +12,7 @@ Your contributions will help me and others build a better definition. **I will c
 - Some if not all information published here might not be accurate or straight up incorrect, anything that you do with this information is entirely your responsibility, with that in mind, I very much accept corrections. If you find any inaccurate information, I will make sure to revise them.
 
 # 📄 XDF Releases
-![XDF Parameter Tree](https://imgur.com/eSzodMs)
+![XDF Parameter Tree](https://i.imgur.com/eSzodMs.png)
 ### 👇XDF is now available for download👇<br> 
 <a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/38770-K64-N04-v0.95" target="_blank">CBR250RR 38770-K64-N04 XDF Release Download</a>  
 ⚠️Please read the release note first before proceeding to modify or flash your binary
