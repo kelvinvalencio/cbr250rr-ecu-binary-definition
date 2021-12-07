@@ -21,7 +21,7 @@ Your help is one of the most important aspect of this project, there are a lot o
 Supported ECU Model is **38770-K64-N04**. Original bin checksum value: **C2FF** 
 
 # 📄📑 Binary Definition & XDF Release
-![XDF Parameter Tree](https://i.imgur.com/0d99Jk1.png)
+![CBR250RR XDF Parameter Tree](https://i.imgur.com/eSzodMs.png)
 I have released a usable XDF for 38770-K64-N04 and is free to download. I also published the whole binary definition that includes fuel map, ignition map, limiters, and more.
 XDF Download & definition is available in the [Github repository page](https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition)
 
