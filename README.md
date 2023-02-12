@@ -1,6 +1,5 @@
 # ℹ️ About CBR250RR ECU Binary Definition
 CBR250RR Stock ECU's maps & other settings definition from its flash memory. The goal is to let CBR250RR MC51 owners tune their bikes using the well-known tuning software **TunerPro**.<br>
-Also I've put their stock binaries here so you can analyze them using a binary analysis software like WinOls.
 Currently available for the following ECUs:
 | Part No. | Region | Year/Type
 | -- | -- | --
