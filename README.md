@@ -4,7 +4,7 @@ Currently available for the following ECUs:
 | Part No. | Region | Year/Type
 | -- | -- | --
 | 38770-K64-N04 | Indonesia | 2017-2019/Base Model
-| 38770-K64-N04 | Indonesia | 2020-2022/SP QS
+| 38770-K64-ND1 | Indonesia | 2020-2022/SP QS
 
 ### Help
 If you've tested the XDF, or know better about the conversion factor, map categorization, map figures, etc., you're welcome to suggest changes
