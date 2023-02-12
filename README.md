@@ -1,28 +1,32 @@
 # ℹ️ About CBR250RR ECU Binary Definition
-This is my personal project, the goal is to analyze, publish, and improve CBR250RR stock ECU binary definition. <br>**This information wasn't publicly available on the Internet at the time of my first publication**, so my hope is that this project will be able to help individual/user/amateur tuners tune their own bike.  
-Supported ECU Model is **38770-K64-N04**. Original bin checksum value: **C2FF** 
+CBR250RR Stock ECU's maps & other settings definition from its flash memory. The goal is to let CBR250RR MC51 owners tune their bikes using the well-known tuning software **TunerPro**.<br>
+Also I've put their stock binaries here so you can analyze them using a binary analysis software like WinOls.
+Currently available for the following ECUs:
+| Part No. | Region | Year/Type
+| -- | -- | -- | --
+| 38770-K64-N04 | Indonesia | 2017-2019/Base Model
+| 38770-K64-N04 | Indonesia | 2020-2022/SP QS
 
-### Community Help & Support
-I need your help to improve and categorize these maps! Discussions are encouraged here!
-You can help improving this definition by clicking **New Discussion** in **Discussions** tab OR **email me at** <kelvinvalencio@protonmail.com>  
-Your contributions will help me and others build a better definition. **I will credit your work** in the credits section.
+### Help
+If you've tested the XDF, or know better about the conversion factor, map categorization, map figures, etc., you're welcome to suggest changes
 
 ### Warning
-- I'm not responsible for any damage/consequences that occurs. This documentation is aimed to be a guide for individual/user/amateur tuners.
-- Some if not all information published here might not be accurate or straight up incorrect, anything that you do with this information is entirely your responsibility, with that in mind, I very much accept corrections. If you find any inaccurate information, I will make sure to revise them.
+- If you decide to do anything with your ECU, I will not be responsible
+- Assume nothing is reliable here, please test everything yourself and let me know the result
 
-# 📄 XDF Releases
+# 📄 XDF Releases for TunerPro
+### XDF is in the <a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases" target="_blank">Releases</a> section <br>
 ![XDF Parameter Tree](https://i.imgur.com/eSzodMs.png)
-### 👇XDF is now available for download👇<br> 
-<a href="https://github.com/kelvinvalencio/cbr250rr-ecu-binary-definition/releases/tag/38770-K64-N04-v0.95" target="_blank">CBR250RR 38770-K64-N04 XDF Release Download</a>  
-⚠️Please read the release note first before proceeding to modify or flash your binary
 
+# About ECU
+- Produced by Keihin as one of Honda's ECU vendor, not much details about it
+- Uses Renesas SH7058 32 bit microcontroller with SH-2E processor, SuperH (RISC) CPU Architecture developed by Hitachi and produced by Renesas
+- Has 1 MB of flash memory, but only half occupied
 
-# 📑 Binary Definition
+# 📑 Binary Definition (N04)
 ### Axis Tables
-Value breakpoints, could be called axis data
-- MAP units are still unknown, it could be actual pressure or just senso voltage, **contact me if you know**
-- TPS highest value is 661, divided by 100 (percent) as 100% throttle input
+- MAP 
+- TPS highest value is 661, divided by 100 (percent) as 100% throttle opening(?)
 - Cell data size 2 Bytes (16 bit)
 - TBW axis might not be accurate, I found it directly above TBW maps, highest value is 802
 
