@@ -1,10 +1,12 @@
 # ℹ️ About CBR250RR ECU Binary Definition
 CBR250RR Stock ECU's maps & other settings definition from its flash memory. The goal is to let CBR250RR MC51 owners tune their bikes using the well-known tuning software **TunerPro**.<br>
-Currently available for the following ECUs:
-| Part No. | Region | Year/Type
-| -- | -- | --
-| 38770-K64-N04 | Indonesia | 2017-2019/Base Model
-| 38770-K64-ND1 | Indonesia | 2020-2022/SP QS
+The following are known ECUs for CBR250RR MC51:
+| Part No. | Region | Year/Type | Binary Available | XDF Available
+| -- | -- | -- | -- | --
+| 38770-K64-N04 | Indonesia | 2017-2019/Base and ABS Model | Yes | Yes
+| 38770-K64-ND1 | Indonesia | 2020-2022/SP QS | Yes | Yes
+| 38770-K64-N01 | Thailand | 2017-2019/Base and ABS Model | Yes | No
+| 38770-K64-R01 | - | 2017-2019/HRC ECU | Yes | No
 
 ### Help
 If you've tested the XDF, or know better about the conversion factor, map categorization, map figures, etc., you're welcome to suggest changes
