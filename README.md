@@ -3,7 +3,7 @@ CBR250RR Stock ECU's maps & other settings definition from its flash memory. The
 Also I've put their stock binaries here so you can analyze them using a binary analysis software like WinOls.
 Currently available for the following ECUs:
 | Part No. | Region | Year/Type
-| -- | -- | -- | --
+| -- | -- | --
 | 38770-K64-N04 | Indonesia | 2017-2019/Base Model
 | 38770-K64-N04 | Indonesia | 2020-2022/SP QS
 
